@@ -4,5 +4,11 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   // code here
-  return <AuthContext.Provider>{children}</AuthContext.Provider>;
+  const [isAuth, setIsAuth] = React.useState(false);
+
+  const handleAuth = () => {
+    setIsAuth(!isAuth);
+  }
+
+  return <AuthContext.Provider value={{isAuth, handleAuth}}>{children}</AuthContext.Provider>;
 };
