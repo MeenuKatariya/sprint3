@@ -1,6 +1,6 @@
 import React from "react";
 
-import {axios} from "axios"
+import axios from "axios"
 
 export const CartContext = React.createContext();
 
@@ -23,6 +23,7 @@ export const CartProvider = ({ children }) => {
 
  const handeAdd=(id)=>{
     const items=cart.find((el)=>el.productId==id)
+    console.log(items,"items")
     if(items==undefined)
     {
       axios({
@@ -60,6 +61,7 @@ export const CartProvider = ({ children }) => {
  
  const handleIncrement =(id)=>{
   const items=cart.find((el)=>el.productId==id)
+  console.log(items,"increase")
   axios({
     method:"patch",
     url:`http://localhost:8080/cartItems/${id}`,
