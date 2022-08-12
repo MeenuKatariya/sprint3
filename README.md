@@ -1,19 +1,9 @@
-- fork the repository
-
-- clone the forked repository
-
-```
-git clone <git_url>
-```
-
-```
-cd sprint3
-```
-
-```
-npm install
-```
-
-only core ( whatever cra offers ) libraries have been installed. If you want to use any other library. You'll have to install it.
-
-Example : If you need `react-router-dom` library; please install it.
+<h1>Cart</h1>
+A web application in which user can add ,delete ,update count
+<h3>Teach Stack : React, JSON-Server</h3>
+Features : 
+<ul>
+<li>Login Functionality</li>
+<li>Add to cart, Delete from Cart</li>
+<li>Update Counter</li>
+</ul>
